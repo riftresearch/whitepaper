@@ -1,0 +1,31 @@
+name: Compile LaTeX document
+
+on:
+  push:
+    paths:
+      - 'whitepaper.tex'
+
+jobs:
+  build-and-commit-pdf:
+    runs-on: ubuntu-latest
+    container:
+      image: aergus/latex:latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Compile LaTeX document
+      run: pdflatex -interaction=nonstopmode whitepaper.tex
+
+    - name: Configure Git
+      run: |
+        git config --global user.email "action@github.com"
+        git config --global user.name "GitHub Action"
+
+    - name: Commit and Push PDF
+      run: |
+        git add whitepaper.pdf
+        git commit -m "Update whitepaper.pdf" --allow-empty
+        git push origin HEAD:${{ github.ref }}
+
