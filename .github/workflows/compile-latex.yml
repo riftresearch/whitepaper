@@ -2,8 +2,8 @@ name: Compile LaTeX document
 
 on:
   push:
-    paths:
-      - 'whitepaper.tex'
+    paths-ignore:
+      - 'whitepaper.pdf'
 
 jobs:
   build-and-commit-pdf:
@@ -22,10 +22,10 @@ jobs:
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
+        git config --global --add safe.directory /github/workspace
 
     - name: Commit and Push PDF
       run: |
         git add whitepaper.pdf
         git commit -m "Update whitepaper.pdf" --allow-empty
-        git push origin HEAD:${{ github.ref }}
-
+        git push origin HEAD:refs/heads/main
