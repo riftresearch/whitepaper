@@ -15,14 +15,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Compile LaTeX document
-      run: pdflatex -interaction=nonstopmode whitepaper.tex
-
-    - name: Configure Git
+    - name: Configure Git and Safe Directory
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
-        git config --global --add safe.directory /github/workspace
+        # Configure the safe directory based on GitHub Actions runner environment specifics
+        git config --global --add safe.directory /__w/whitepaper/whitepaper
+
+    - name: Compile LaTeX document
+      run: pdflatex -interaction=nonstopmode whitepaper.tex
 
     - name: Commit and Push PDF
       run: |
