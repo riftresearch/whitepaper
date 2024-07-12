@@ -1,2 +1,1 @@
-# whitepaper
-Rift Hyperbridge Whitepaper
+# Rift Hyperbridge Whitepaper
