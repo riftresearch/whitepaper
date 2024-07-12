@@ -5,6 +5,8 @@ on:
     paths-ignore:
       - 'whitepaper.pdf'
 
+permissions: write-all
+
 jobs:
   build-and-commit-pdf:
     runs-on: ubuntu-latest
