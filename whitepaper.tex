@@ -19,6 +19,7 @@
 \usepackage{lmodern}
 \usepackage[a4paper, total={6in, 8in}, top=1in, bottom=2in]{geometry}
 \usepackage{xcolor}
+\usepackage{setspace}
 \newcommand{\code}[1]{\texttt{#1}}
 \definecolor{lightblue}{rgb}{0.8, 0.9, 1} % A light blue color
 \newsavebox{\mybox}
@@ -81,7 +82,7 @@
 \begin{document}
 
 \begin{center}
-\textbf{\Huge Rift Hyperbridge}
+\textbf{\Huge Rift HyperBridge}
 \end{center}
 
 \begin{center}
@@ -90,7 +91,11 @@
 \vspace*{\baselineskip}
 
 \begin{center}
-{Cliff Syner, Tristan Barrett, Samee Siddiqui}
+{Cliff Syner{~~~~~~~~~~~~~~}Tristan Barrett{~~~~~~~~~~~~}Samee Siddiqui}
+\end{center}
+
+\begin{center}
+{cliff@rift.exchange{~~~~~}tristan@rift.exchange{~~~~~}samee@rift.exchange}
 \end{center}
 
 \vspace*{\baselineskip}
@@ -350,7 +355,8 @@ unlocked and available for other buyers to reserve.}
 {}
 {}\vspace*{\baselineskip}
 \begin{center}
-{\includegraphics{images/image1.png}}
+{\includegraphics[width=5.6in]{images/image1.png}}
+
 \end{center}
 {}\vspace*{\baselineskip}
 
@@ -388,7 +394,7 @@ to the prover.}
 {}
 {}\vspace*{\baselineskip}
 
-\hspace*{3em}{\includegraphics{images/image4.png}}
+\hspace*{4em}{\includegraphics[width=5in]{images/image4.png}}
 {}\vspace*{\baselineskip}
 
 {}
@@ -400,7 +406,7 @@ period, the escrowed ETH can be released (by anyone) to the Buyer's
 Ethereum payout address. Upon escrow release, a reward and gas rebate is
 paid out to the releaser}{~and the swap is complete.}
 
-{\includegraphics{images/image2.png}}
+\hspace*{1em}{\includegraphics[width=5.5in]{images/image2.png}}
 {}\vspace*{\baselineskip}
 
 
@@ -414,6 +420,7 @@ paid out to the releaser}{~and the swap is complete.}
 main components and their functionality are outlined below:}
 
 {}
+{}\vspace*{\baselineskip}
 
 \hspace*{3em}{Smart Contracts:}
 
@@ -472,6 +479,8 @@ primary functions:}
 They deposit ETH, specify an exchange rate, and provide a Bitcoin
 address for Buyers to pay them. This creates a
 new}{~}{DepositVault:}
+{}\vspace*{\baselineskip}
+
 
 \begin{codeblock}
 
@@ -876,7 +885,7 @@ calculating the values needed to assert the invariants. This can be
 implemented based on the following pseudocode:}
 
 {}
-{}\vspace*{\baselineskip}
+
 
 \begin{codeblock}
     
@@ -928,6 +937,7 @@ proposed\_target\_difficulty)}
 
 {}
 \end{codeblock}
+{}\vspace*{\baselineskip}
 
 {If true, we can be confident the proposed block containing
 the Buyer's transaction is valid.}
@@ -983,6 +993,9 @@ selected, generating a proof requires these inputs passed down from the \code{GC
 
 {Using these inputs, we can now verify or reject if a proposed
 transaction hash matches the presented transaction data.}
+{}{}\vspace*{\baselineskip}
+{}{}\vspace*{\baselineskip}
+
 {}{}\vspace*{\baselineskip}
 {}{}\vspace*{\baselineskip}
 
@@ -1423,6 +1436,9 @@ Ethereum's ecosystem for the first time.}
 
 
 {}{}\vspace*{\baselineskip}
+
+\newpage
+
 \begin{center}
 \textbf{REFERENCES}
 \end{center}
@@ -1430,14 +1446,14 @@ Ethereum's ecosystem for the first time.}
 {}{}\vspace*{\baselineskip}
 {}
 
-{{[}1{]} Xie, T., Zhang, J., Cheng, Z., Zhang, F., Zhang, Y., Jia, Y.,
+
+\doublespacing
+{{{[}1{]} Xie, T., Zhang, J., Cheng, Z., Zhang, F., Zhang, Y., Jia, Y.,
 Boneh, D., \& Song, D. (2022). zkBridge: Trustless Cross-chain Bridges Made Practical. }{Proceedings of the 2022 ACM
 SIGSAC Conference on Computer and Communications Security}{,
 3003--3017.}{ https://doi.org/10.1145/3548606.3560652}}
 
-{}
-
-{{[}2{]} }{The Collapse of FTX: What Went Wrong With the Crypto
+{{{[}2{]} }{The Collapse of FTX: What Went Wrong With the Crypto
 Exchange?}{~(n.d.). Investopedia. https://www.investopedia.com/what-went-wrong-with-ftx-6828447}}
 
 {{[}3{]} }{Celsius Network LLC, et al.}{~(n.d.). https://cases.stretto.com/celsius/}
@@ -1445,7 +1461,7 @@ Exchange?}{~(n.d.). Investopedia. https://www.investopedia.com/what-went-wrong-w
 {{[}4{]} }{wBTC - Wrapped Tokens}{~(2019). https://wbtc.network/assets/wrapped-tokens-whitepaper.pdf}
 
 {{[}5{]} }{tBTC Bitcoin Bridge \textbar{} Threshold Docs}{. (2024,
-February 14). https://docs.threshold.network/applications/tbtc-v2}
+February 14). https://docs.threshold.network/appli-}{cations/tbtc-v2}
 
 {{[}6{]} }{Axie Infinity's Ronin bridge hacked for over \$600M}{. (2022,
 March 29). Cointelegraph. https://cointelegraph.com/news/axie-infinity-s-ronin-bridge-hacked-for-over-600m}
@@ -1454,11 +1470,11 @@ March 29). Cointelegraph. https://cointelegraph.com/news/axie-infinity-s-ronin-b
 RenBridge https://bridge.renproject.io/}
 
 {{[}8{]}}{~THORchain: A Decentralized Liquidity Network }{(n.d.).
-GitHub. https://github.com/thorchain/Resources/blob/master/Whitepapers/THORChain-Whitepaper-May2020.pdf}
+GitHub. https://github.com/thorchain/-}{Resources/blob/master/Whitepapers/THORChain-Whitepaper-May2020.pdf}
 
 {{[}9{]} }{What is Chain Abstraction? \textbar{} NEAR Documentation}{.
 (2024, June
-7). https://docs.near.org/build/chain-abstraction/what-is}
+7). https://docs.near.org/build-}{/chain-abstraction/what-is}
 
 {{[}10{]} }{Validators \textbar{} Mainnet Beacon Chain (Phase 0)
 Ethereum 2.0 Explorer}{. (n.d.). Etherscan Beacon Chain (Phase 0) Ethereum 2.0 Explorer. https://beaconscan.com//validators}
@@ -1466,29 +1482,30 @@ Ethereum 2.0 Explorer}{. (n.d.). Etherscan Beacon Chain (Phase 0) Ethereum 2.0 E
 {{[}11{]} }{Bitcoin (BTC) SHA-256 \textbar{} Mining Pools}{. (n.d). https://miningpoolstats.stream/bitcoin}
 
 {{[}12{]} }{Bitcoin Hashrate Chart---BTC Hashrate 621.48 EH/s}{.
-(n.d.). https://www.coinwarz.com/mining/bitcoin/hashrate-chart}
+(n.d.). https://www.coinwarz.com/mining-}{/bitcoin/hashrate-chart}
 
 {{[}13{]} }{THORChain Network Explorer}{. (n.d.). https://thorchain.net/nodes}
 
 {{[}14{]} }{Top Crypto Exchanges Ranked by Trust Score}{. (n.d.).
-CoinGecko. https://www.coingecko.com/en/exchanges}
+CoinGecko. https://www.coingecko.com-}{/en/exchanges}
 
 {{[}15{]} Buterin, V. (n.d.). }{Ethereum: A Next-Generation Smart
 Contract and Decentralized Application Platform. Ethereum https://ethereum.org/content/whitepaper/whitepaper-pdf/Ethereum\_Whitepaper\_-\_Buterin\_2014.pdf}
 
 {{[}16{]} }{A Review of zk-SNARKs}{. (n.d.). Ar5iv. ZK Snarks
-https://ar5iv.labs.arxiv.org/html/2202.06877\#S1.SS1}
+https://ar5iv.labs.arxiv.org/html/2202.06877-}{\#S1.SS1}
 
 {{[}17{]} Nakamoto, S. (n.d.). }{Bitcoin: A Peer-to-Peer Electronic Cash
-System. https://bitcoin.org/bitcoin.pdf}
+System. https://bitcoin.org/bitcoin-}{.pdf}
 
 {{[}18{]} }{Eth2.0-ssz/specs/merkleization/merkle\_proofs.md at master ·
-protolambda/eth2.0-ssz}{. (n.d.). GitHub. https://github.com/protolambda/eth2.0-ssz/blob/master/specs/merkleization/merkle\_proofs.md}
+protolambda/eth2.0-ssz}{. (n.d.). GitHub. https://github.com/protolambda/eth2.0-ssz/blob/master/specs/merkleization/merkle-}{\_proofs.md}
 
-{{[}19{]} }{P2WPKH \textbar{} Pay To Witness Public Key Hash}{. (n.d.). https://learnmeabitcoin.com/technical/script/p2wpkh/}
+{{[}19{]} }{P2WPKH \textbar{} Pay To Witness Public Key Hash}{. (n.d.). https://learnmeabitcoin.com/technical-}{/script/p2wpkh/}
 
-{{[}20{]} }{callumr00 / displaying-bitcoin-block-data}{. (n.d.). Blocks
-688991-688986 GitHub. https://github.com/callumr00/displaying-bitcoin-block-data/blob/main/sample/ExtractData.py}
+\doublespacing
+{{{[}20{]} }{callumr00 / displaying-bitcoin-block-data}{. (n.d.). Blocks
+688991-688986 GitHub. https://github.com/callumr00/displaying-bitcoin-block-data/blob/main/sample/ExtractData.py}}
 
 
 \end{document}
